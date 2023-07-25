@@ -15,7 +15,7 @@ import Link from "next/link";
     isError: boolean,
     hasMore:boolean,
     fetchNewTweets: ()=> Promise<unknown>,
-    tweets: Tweet[]
+    tweets?: Tweet[]
   }
  export function InfiniteTweetList({tweets,isError,isLoading,hasMore ,fetchNewTweets} : InfiniteTweetListProps){
     if(isError) return <h1>Error...</h1>

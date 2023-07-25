@@ -1,3 +1,4 @@
+import { Tweet } from "@prisma/client";
 import { isError } from "@tanstack/react-query";
 import { InfiniteTweetList } from "~/components/InfiniteTweetList";
 import { NewTweetForm } from "~/components/NewTweetForm";
@@ -18,7 +19,7 @@ export default function Home() {
 function RecentTweets(){
   const tweets= api.tweet.infiniteFeed.useInfiniteQuery({},{getNextPageParam: (lastPage)=> lastPage.nextCursor});
   return (<InfiniteTweetList
-    tweets={tweets.data?.pages.flatMap((page)=> page.tweets)}
+    tweets ={tweets.data?.pages.flatMap((page)=> page.tweets) }
      isError={tweets.isError}
      isLoading= {tweets.isLoading}
      hasMore={tweets.hasNextPage as boolean}
