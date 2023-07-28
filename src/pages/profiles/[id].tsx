@@ -14,7 +14,7 @@ import { Button } from "~/components/Button";
 import { InfiniteTweetList } from "~/components/InfiniteTweetList";
 import Link from "next/link";
 import { VscArrowLeft } from "react-icons/vsc";
-import { IconHoverEffect } from "~/components/IconHoverEffect";
+import { IconHoverEffect } from "../../components/IconHoverEffect";
 import { ProfileImage } from "~/components/ProfileImage";
 const pluralRules = new Intl.PluralRules();
 function getPlural(number: number, singular: string, plural: string) {
