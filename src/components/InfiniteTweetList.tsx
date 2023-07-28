@@ -3,9 +3,9 @@ import Link from "next/link";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ProfileImage } from "./ProfileImage";
 import { VscHeart, VscHeartFilled } from "react-icons/vsc";
-import { IconHoverEffect } from "./IconHoverEffect";
 import { api } from "~/utils/api";
 import { LoadingSpinner } from "./LoadingSpinner";
+import { IconHoverEffect } from "./IconHoverEffect";
 
 type Tweet = {
   id: string;
